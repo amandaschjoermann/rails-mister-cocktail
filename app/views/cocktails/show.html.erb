@@ -5,3 +5,5 @@
 <% @cocktail.ingredients.each do |ingredient| %>
   <%= ingredient.name %>
 <% end %>
+
+<%= cl_image_tag @cocktail.photo, height: 100, width: 200, crop: :fill %>
