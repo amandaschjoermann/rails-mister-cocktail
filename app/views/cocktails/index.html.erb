@@ -1,1 +1,42 @@
-
+<div class="banner">
+ <div class="fancy-header text-center">
+  <p>
+    Tonight is a drinks kinda night
+    <span> COCKTAIL MENU </span>
+    MMH... TASTY!
+  </p>
+</div>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-4">
+      <% if cocktail.photo? %>
+      <div class="cocktail-card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0, 128, 0,0.1) 50%), url(<%= cl_image_path cocktail.photo %>)">
+        <% else %>
+        <div class="cocktail-card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0, 128, 0,0.1) 50%),  url(http://placecage.com/400/300)">
+          <% end %>
+          <div class="like-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <%= link_to cocktail_path(cocktail) do %>
+            <div class="show-more">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          <% end %>
+          <div class="triangle">
+          </div>
+          <div class="cocktail-name"> <%= cocktail.name %> </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to root_path do  %>
+    <ul class="logo-text">
+      <li><strong>drink.</strong></li>
+      <li><strong>drinks.</strong></li>
+      <li>often.</li>
+    </ul>
+  <% end %>
+</div>
+</div>

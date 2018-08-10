@@ -1,3 +1,8 @@
+a ul {
+  color: white;
+  text-decoration: none;
+}
+
 .banner {
   background-image: asset-url('background.jpeg');
   height: 100vh;
@@ -22,6 +27,7 @@
 }
 
 .banner .center-text {
+  width: 180px;
   line-height: 30px;
   padding: 25px 20px;
   font-size: 40px;

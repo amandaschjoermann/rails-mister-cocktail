@@ -1,0 +1,81 @@
+.cocktail-card {
+  margin-top: 100px;
+  height: 275px;
+  width: 350px;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  border: 6px solid white;
+  box-shadow: 0px 0px 5px grey;
+  border-radius: 3px;
+}
+
+.like-icon {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  font-size: 30px;
+  color: rgba(200,200,200,0.4);
+  transition: 0.3s ease;
+  &:hover {
+    color: rgba(200,200,200,0.7);
+  }
+}
+
+
+.cocktail-name {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 120px;
+  height: 120px;
+  border-bottom: solid 60px white;
+  border-right: solid 60px white;
+  border-left: solid 60px transparent;
+  border-top: solid 60px transparent;
+}
+
+.show-more {
+  font-weight: lighter;
+  font-size: 40px;
+  color: rgba(200,200,200,1);
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+  transition: 0.4s ease;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  &:hover {
+    opacity: 1;
+    color: #526539;
+  }
+}
+
+.cocktail-name {
+  box-shadow: 0 0 1px rgba(110,110,110,0.8);
+  font-family: 'Roboto Mono', monospace;
+  background-color: rgba(20,20,20,0.8);
+  padding: 5px 10px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 20px;
+}
+
+
+
+
+
+

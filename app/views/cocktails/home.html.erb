@@ -1,17 +1,23 @@
 <div class="banner">
-  <ul class="center-text">
-    <li><strong>drink.</strong></li>
-    <li><strong>drinks.</strong></li>
-    <li>often.</li>
-  </ul>
+  <div class="container">
+    <%= link_to cocktails_path, class: "button" do %>
+      <svg><g><line x2="227.62" y1="31.28" y2="31.28"></line><polyline points="222.62 25.78 228.12 31.28 222.62 36.78"></polyline><circle cx="224.67" cy="30.94" r="30.5" transform="rotate(180 224.67 30.94) scale(1, -1) translate(0, -61)"></circle></g></svg>
+      <font>All cocktails</font>
+    <% end %>
+    <ul class="center-text">
+      <li><strong>drink.</strong></li>
+      <li><strong>drinks.</strong></li>
+      <li>often.</li>
+    </ul>
+  </div>
   <div class="main-container">
-  <form class="search-container" action="">
-    <input id="search-box" type="text" class="search-box" name="q" />
-    <label for="search-box">
-      <span class="glyphicon glyphicon-search search-icon"></span>
-    </label>
-    <input type="submit" id="search-submit" />
-  </form>
-  <p>Search cocktails</p>
+    <form class="search-container" action="">
+      <input id="search-box" type="text" class="search-box" name="q" />
+      <label for="search-box">
+        <span class="glyphicon glyphicon-search search-icon"></span>
+      </label>
+      <input type="submit" id="search-submit" />
+    </form>
+    <p>Search cocktails</p>
   </div>
 </div>

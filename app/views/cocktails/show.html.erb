@@ -1,9 +1,52 @@
-<h1>THis is a cocktail page</h1>
+<div class="banner">
+  <div class="avatar">
+    <i class="fas fa-heart"></i>
+  </div>
 
-<%= @cocktail.name %>
+  <div class="right-container">
+    <div class="right-box">
+      <h1 class="profile-name">N&deg;#<%= @cocktail.id %>, <%= @cocktail.name %></h1>
+      <%= cl_image_tag @cocktail.photo, class: "profile-photo" %>
+      <div class="wishlist">Add to wishlist</div>
+      <ul class="ingredient-list">
+        <h2>Ingredients:</h2>
+        <% @cocktail.doses.each do |dose| %>
+        <li class="list-item">
+          <%= dose.ingredient.name %>,
+          <%= dose.description %>
+          <%= link_to dose_path(dose), method: :delete do %>
+          <i class="far fa-trash-alt"></i>
+          <% end %>
+        </li>
+        <% end %>
+        <button type="button" class="btn add" data-toggle="modal" data-target="#exampleModal">
+          add ingredient
+        </button>
+      </ul>
+      <div class="how-to">
+        <h2>How to:</h2>
+        <p>Mix it up!</p>
+      </div>
+    </div>
+  </div>
+  <%= link_to root_path do  %>
+    <ul class="logo-text">
+      <li><strong>drink.</strong></li>
+      <li><strong>drinks.</strong></li>
+      <li>often.</li>
+    </ul>
+  <% end %>
+</div>
 
-<% @cocktail.ingredients.each do |ingredient| %>
-  <%= ingredient.name %>
-<% end %>
-
-<%= cl_image_tag @cocktail.photo, height: 100, width: 200, crop: :fill %>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <div class="modal-body">
+        <%= render "shared/new-dose-form" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,14 +3,16 @@
     <h3>ADD A COCKTAIL</h3>
     <%= simple_form_for [@cocktail] do |f| %>
     <%= f.input :name, label: false, placeholder: "Which cocktail?", class: "form-control text-center" %>
-    <%= f.input :photo %>
+    <%= f.input :photo, label: "Add a photo"%>
     <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "Add cocktail", class: "btn add" %>
+    <%= f.submit "Add cocktail", class: "add" %>
     <% end %>
   </div>
-  <ul class="logo-text">
-    <li><strong>drink.</strong></li>
-    <li><strong>drinks.</strong></li>
-    <li>often.</li>
-  </ul>
+  <%= link_to root_path do  %>
+    <ul class="logo-text">
+      <li><strong>drink.</strong></li>
+      <li><strong>drinks.</strong></li>
+      <li>often.</li>
+    </ul>
+  <% end %>
 </div>

@@ -1,0 +1,10 @@
+<div class="pop-up">
+  <div class="text-center">
+    <h2>ADD AN INGREDIENT</h2>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description, label: "How much?", class: "form-control text-center" %>
+    <%= f.association :ingredient, class: "form-control text-center" %>
+    <%= f.submit "Add a dose", class: "new-dose" %>
+    <% end %>
+  </div>
+</div>
