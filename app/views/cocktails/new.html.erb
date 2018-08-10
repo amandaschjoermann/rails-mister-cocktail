@@ -1,0 +1,14 @@
+<div class="banner">
+  <div class="form-container text-center">
+    <h3>ADD A COCKTAIL</h3>
+    <%= simple_form_for [@cocktail] do |f| %>
+    <%= f.input :name, label: false, placeholder: "Which cocktail?", class: "form-control text-center" %>
+    <%= f.submit "Add cocktail", class: "btn add" %>
+    <% end %>
+  </div>
+  <ul class="logo-text">
+    <li><strong>drink.</strong></li>
+    <li><strong>drinks.</strong></li>
+    <li>often.</li>
+  </ul>
+</div>

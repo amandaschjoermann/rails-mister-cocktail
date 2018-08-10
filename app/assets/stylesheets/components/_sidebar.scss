@@ -1,0 +1,54 @@
+#sticky-sidebar {
+  margin-top: 100px;
+  width: 55px;
+  height: 141px;
+  background-color: transparent;
+  position: fixed;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 2px solid white;
+  border-left: none;
+  transition: 0.4s ease;
+}
+
+.rotated-button {
+  text-align: center;
+  vertical-align: middle;
+  position: fixed;
+  left: -42px;
+  margin-top: 41px;
+  -webkit-transform: rotate(-90deg);
+  padding: 10px 2px;
+  width: 137px;
+  height: 53px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top: none;
+  background-color: rgba(255,255,255,0.1);
+  transition: 0.4s ease;
+  a {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.4s ease;
+  }
+  .fa-plus {
+    opacity: 0.6;
+    padding: 0 2px;
+    transition: 0.6s ease-in;
+    transition: 0.4s ease-out;
+  }
+}
+
+#sticky-sidebar:hover {
+  background-color: #3d541e;
+}
+
+.rotated-button:hover .fa-plus {
+  text-shadow: 0 0 1px white;
+  color: #3d541e;
+  opacity: 1;
+}

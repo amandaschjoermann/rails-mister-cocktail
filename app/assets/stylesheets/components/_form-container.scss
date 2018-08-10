@@ -1,0 +1,22 @@
+.form-container {
+  padding: 70px 40px;
+  border: 6px solid white;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 2px;
+  box-shadow: 0 0 10px #5e5e5e;
+}
+
+.form-container h3 {
+  font-weight: bold;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 0 5px #5e5e5e;
+}
+
+.form-control {
+  margin: 30px auto;
+  width: 145px;
+}
+
+.btn .add {
+  color: black;
+}
